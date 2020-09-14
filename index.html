@@ -7,14 +7,11 @@
     <meta property="theme-color" content="#000000" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="WWSC20" />
-    <meta
-      property="og:description"
-      content="The Worldwide Shortcuts Conference or WWSC, is an all-online presentation featuring the latest and greatest things people have created with Shortcuts."
-    />
+    <meta property="og:description" content="Write shortcuts, blow minds. Join us for the brand new WWSC — an all-online Shortcuts presentation announcing breakthrough shortcuts, workshops to learn new skills, and more.">
     <meta property="og:image" content="/apple-touch-icon.png" />
     <meta property="og:url" content="https://wwsc.github.io" />
-    <meta property="og:title" content="WWSC20 Wallet Passes" />
-    <title>WWSC20 Wallet Passes</title>
+    <meta property="og:title" content="WWSC20" />
+    <title>WWSC20</title>
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -55,6 +52,9 @@
             Write shortcuts. Blow minds.
           </h1>
           <h2 id="countdown">
+            <div id="watchLink">
+              <a href="/watch">Watch Now</a><br>
+            </div>
             <span class="dd">00</span>:<span class="hh">00</span>:<span
               class="mm"
               >00</span
@@ -79,7 +79,7 @@
               height="60"
               alt="Add to Calendar"
           /></a>&nbsp;
-          <a href="/pass.html"
+          <a href="/pass"
             ><img
               src="https://i.imgur.com/rE8UKZF.png"
               height="60"
@@ -105,9 +105,8 @@
     </script>
     <script>
       let count = () => {
-        let distance = new Date(
-          new Date("2020-09-19T10:00:00-07:00") - new Date()
-        );
+        let distance=new Date("2020-09-19T10:00:00-07:00") - new Date();
+        if(distance < 0) return document.querySelector("#countdown").innerHTML=(distance/(1000 * 60 * 60)<1?'':'00:00:00<br>')+''
         document.querySelector("#countdown > span.dd").textContent = (
           Math.floor(distance / (1000 * 60 * 60 * 24)) + ""
         ).padStart(2, "0");
