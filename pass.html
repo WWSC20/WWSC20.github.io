@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WWSC20</title>
+    <meta property="theme-color" content="#000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="WWSC20" />
+    <meta
+      property="og:description"
+      content="The Worldwide Shortcuts Conference or WWSC, is an all-online presentation featuring the latest and greatest things people have created with Shortcuts."
+    />
+    <meta property="og:image" content="/apple-touch-icon.png" />
+    <meta property="og:url" content="https://wwsc.github.io" />
+    <meta property="og:title" content="WWSC 2020" />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#121212" />
+    <script
+      async
+      src="https://unpkg.com/pwacompat"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img
+          src="https://cdn.glitch.com/67cab897-dea4-4ba5-a1cf-f4505b8371a0%2Ficons8-shortcuts.svg?v=1596567622611"
+          style="filter:invert(1)"
+        />
+        <a id="logo" href="/"><b>WWSC</b>20</a>
+        <nav>
+          <ul>
+            <li><a href="/watch">Watch</a></li>
+            <li><a href="/#schedule">Schedule</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="mainframe">
+      <div>
+        <div class="container">
+          <h1>
+            WWSC20 Wallet Passes
+          </h1>
+          <p>Please note these are entirely useless and just for fun</p>
+          <div class="passinput">
+            <input type="text" placeholder="Your Name" /><button>
+              &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+      new Crate({
+        server: '491379054331559936',
+        channel: '740352160528728125',
+        glyph: ["https://cdn.glitch.com/67cab897-dea4-4ba5-a1cf-f4505b8371a0%2Ficons8-shortcuts.svg?v=1596567622611", "100x100"],
+        color: "#eee"
+      })
+    </script>
+    <script type="module" async>
+      import "https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate";
+
+      const el = document.createElement("pwa-update");
+      document.body.appendChild(el);
+    </script>
+  </body>
+</html>
