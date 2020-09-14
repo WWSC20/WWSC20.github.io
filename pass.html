@@ -51,13 +51,23 @@
           </h1>
           <p>Please note these are entirely useless and just for fun</p>
           <div class="passinput">
-            <input type="text" placeholder="Your Name" /><button>
-              &rarr;
-            </button>
+            <input type="text" placeholder="Your Name" /><button title="Create Pass"></button>
           </div>
         </div>
       </div>
     </div>
+    <script>
+      let name=document.querySelector(".passinput input[type=text]")
+      let button=document.querySelector(".passinput button")
+      button.addEventListener("click", async ()=>{
+        try{
+          name.disabled=button.disabled=true;
+          location.href=(URL.createObjectURL(await(await fetch("https://wwsc20-pkpass-api.glitch.me/"+encodeURIComponent(name.value)+"/pass.pkpass")).blob()))
+        }catch(e){
+          alert("Oops! There was an error!")
+        }
+      })
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
       new Crate({
         server: '491379054331559936',
