@@ -138,7 +138,7 @@ a:hover {
     border-bottom: 1px solid #ffffff57;
     text-align: left;
     display: grid;
-    grid-template-columns: 10rem 1fr;
+    grid-template-columns: 12rem 1fr;
     grid-gap: 1rem;
 }
 
