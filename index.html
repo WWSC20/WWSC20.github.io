@@ -44,7 +44,7 @@
       </div>
     </header>
     <div id="mainframe">
-      <div>
+      <div class="screen">
         <div class="container">
           <h1>
             <img
@@ -84,11 +84,12 @@
           >&nbsp;
           <a href="/pass"
             ><img
-              src="https://i.imgur.com/rE8UKZF.png"
+              src="https://cdn.glitch.com/67cab897-dea4-4ba5-a1cf-f4505b8371a0%2FAdd_to_Apple_Wallet_rgb_US-UK.svg?v=1600126626461"
               height="60"
-              alt="Add to Wallet"
+              alt="Add to Apple Wallet"
+              id="addtowallet"
           /></a>
-          <br>
+          <br />
           <small>All dates and times are given in your local timezone.</small>
           <div class="schedule">
             <div>
@@ -97,6 +98,14 @@
           </div>
         </div>
       </div>
+      <footer>
+        <div class="container">
+          <small>
+            Apple and Apple Wallet are trademarks of Apple Inc., registered in
+            the U.S. and other countries.
+          </small>
+        </div>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
       new Crate({
@@ -164,6 +173,11 @@
           )
           .join("\n");
       })();
+      document.querySelector("#addtowallet").src = navigator.userAgent.includes(
+        "Android"
+      )
+        ? "https://www.walletpasses.io/badges/badge_web_black_en@4x.png"
+        : "https://cdn.glitch.com/67cab897-dea4-4ba5-a1cf-f4505b8371a0%2FAdd_to_Apple_Wallet_rgb_US-UK.svg?v=1600126626461";
     </script>
     <script type="module" async>
       import "https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate";
