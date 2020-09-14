@@ -190,3 +190,10 @@ a:hover {
     background-repeat: no-repeat;
     cursor:pointer;
 }
+.passinput button:disabled {
+    background-image: url(/spinner.svg);
+}
+
+.passinput input[type="text"]:disabled {
+    opacity: 0.5;
+}

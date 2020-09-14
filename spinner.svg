@@ -1,0 +1,7 @@
+<svg  xmlns="http://www.w3.org/2000/svg" 
+  version="1.1"  viewBox="0 0 50 50" width="24" height="24" style="-webkit-animation:rotate 2s linear infinite;animation:rotate 2s linear infinite;">
+  <defs><style>
+    @-webkit-keyframes rotate{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes dash{0%{stroke-dasharray:1,150;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-35}to{stroke-dasharray:90,150;stroke-dashoffset:-124}}@keyframes dash{0%{stroke-dasharray:1,150;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-35}to{stroke-dasharray:90,150;stroke-dashoffset:-124}}
+  </style></defs>
+  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" style="-webkit-animation:dash 1.5s ease-in-out infinite;animation:dash 1.5s ease-in-out infinite" stroke="#000" stroke-linecap="round"></circle>
+</svg>
